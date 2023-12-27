@@ -4,7 +4,7 @@ import "./style.scss";
 
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
 import Img from "../../../components/lazyLoadImage/Img";
-import VideoPopup from "../../../components/videoPopup/VideoPopUp";
+import VideoPopup from "../../../components/videoPopup/VideoPopup";
 import { PlayIcon } from "../PlayBtn";
 
 const VideosSection = ({ data, loading }) => {
@@ -32,13 +32,13 @@ const VideosSection = ({ data, loading }) => {
                             key={video.id}
                             className="videoItem"
                             onClick={() => {
-                                setVideoId(video.key)
+                                setVideoId(video?.key)
                                 setShow(true);
                             }}
                             >
                                 <div className="videoThumbnail">
                                     <Img 
-                                    src={`https://img.youtube.com/vi/${video.key}/mqdefault.jpg`}
+                                    src={`https://img.youtube.com/vi/${video?.key}/mqdefault.jpg`}
                                     />
                                     <PlayIcon/>
                                 </div>
